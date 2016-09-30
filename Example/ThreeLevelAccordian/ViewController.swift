@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import ThreeLevelAccordian
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let threeLevelAccordian = ThreeLevelAccordian(tableView: tableView, cells: [Item]())
         // Do any additional setup after loading the view, typically from a nib.
     }
 

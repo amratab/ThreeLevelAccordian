@@ -1,0 +1,16 @@
+PODS:
+  - ThreeLevelAccordian (0.1.0)
+
+DEPENDENCIES:
+  - ThreeLevelAccordian (from `../`)
+
+EXTERNAL SOURCES:
+  ThreeLevelAccordian:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ThreeLevelAccordian: c680c126368dd54b2f04c24f4bd029e0eda5f8b5
+
+PODFILE CHECKSUM: a7ea1c144f06b27703582af7bc1ed66b5de3730b
+
+COCOAPODS: 1.0.1
