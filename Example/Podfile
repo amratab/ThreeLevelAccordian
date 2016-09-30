@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ThreeLevelAccordian_Example' do
+  pod 'ThreeLevelAccordian', :path => '../'
+
+  target 'ThreeLevelAccordian_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
