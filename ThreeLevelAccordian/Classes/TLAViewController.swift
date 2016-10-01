@@ -12,7 +12,7 @@ public class TLAViewController: UIViewController {
     
     var cells: [TLACell] = [TLACell]()
     var properties: [TLAOption] = [TLAOption]()
-    
+    var delegate: TLADelegate!
     //used for display
     
     var textColor: UIColor!
@@ -237,7 +237,6 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
         let value = item.value as? String
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier) {
             cell.textLabel?.text = value
-//            let labelFont = cell.textLabel?.font
             let label = cell.textLabel!
             if let headerItem = item as? TLAHeaderItem {
                 if let headerFont = headerCellFont {
@@ -383,6 +382,9 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 cell?.accessoryType = UITableViewCellAccessoryType.None
             }
+        }
+        if let delegate = delegate {
+            delegate.didSelectItemAtIndex(indexPath.row)
         }
         
         tableView.beginUpdates()

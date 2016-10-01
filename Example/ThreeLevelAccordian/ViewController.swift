@@ -9,7 +9,7 @@
 import UIKit
 import ThreeLevelAccordian
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, TLADelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var cells = [TLACell]()
@@ -70,11 +70,18 @@ class ViewController: UIViewController {
                                        .ItemCellHeight(50.0)]
         
         let threeLevelAccordian = ThreeLevelAccordian.init(cells: cells, options: options, reuseIdentifier: "checklistAccordianCell")
+        threeLevelAccordian.delegate = self
         delegateController = threeLevelAccordian.controller
         tableView.dataSource = delegateController
         tableView.delegate = delegateController
         tableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func didSelectItemAtIndex(index: Int) {
+        let alertController = UIAlertController(title: "Clicked", message: "Clicked \(index)", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
