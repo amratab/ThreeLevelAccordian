@@ -1,7 +1,7 @@
 {
   "name": "ThreeLevelAccordian",
   "platforms": {
-    "ios": "9.0"
+    "ios": "8.0"
   },
   "summary": "ThreeLevelAccordian provides a three level accordian view.",
   "requires_arc": true,
@@ -20,5 +20,5 @@
   },
   "frameworks": "UIKit",
   "source_files": "ThreeLevelAccordian/**/*.{swift}",
-  "resources": "ThreeLevelAccordian/**/*.{png,jpeg,jpg,storyboard,xib}"
+  "resources": "ThreeLevelAccordian/**/*.{png,xib}"
 }

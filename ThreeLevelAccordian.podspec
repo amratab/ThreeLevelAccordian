@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
  
   # 1
   s.platform = :ios
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
   s.name = "ThreeLevelAccordian"
   s.summary = "ThreeLevelAccordian provides a three level accordian view."
   s.requires_arc = true
@@ -39,5 +39,5 @@ Pod::Spec.new do |s|
   
   s.source_files = "ThreeLevelAccordian/**/*.{swift}"
 
-#  s.resources = "ThreeLevelAccordian/**/*.{png,jpeg,jpg,storyboard,xib}" 
+  s.resources = "ThreeLevelAccordian/**/*.{png,xib}" 
 end

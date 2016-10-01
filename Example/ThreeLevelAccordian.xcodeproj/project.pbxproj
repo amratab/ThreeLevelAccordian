@@ -15,6 +15,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BC382BE21D9FEBE5002D7FA2 /* MyExpandIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC382BE11D9FEBE5002D7FA2 /* MyExpandIcon.png */; };
+		BC382BE41D9FEBF3002D7FA2 /* MyCollapseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC382BE31D9FEBF3002D7FA2 /* MyCollapseIcon.png */; };
+		BCFEEDF41D9E75ED005741EF /* bathroom_darkgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BCFEEDF31D9E75ED005741EF /* bathroom_darkgreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		78625126E78F78ADB3AF0200 /* Pods-ThreeLevelAccordian_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Tests/Pods-ThreeLevelAccordian_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B6E009697CBF9DBFC4ADE42 /* Pods-ThreeLevelAccordian_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Example/Pods-ThreeLevelAccordian_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9C775CBE213FE1D97E0445E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BC382BE11D9FEBE5002D7FA2 /* MyExpandIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyExpandIcon.png; sourceTree = "<group>"; };
+		BC382BE31D9FEBF3002D7FA2 /* MyCollapseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCollapseIcon.png; sourceTree = "<group>"; };
+		BCFEEDF31D9E75ED005741EF /* bathroom_darkgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bathroom_darkgreen.png; sourceTree = "<group>"; };
 		DF0874A0CAA63E89D0E7AFCD /* Pods-ThreeLevelAccordian_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Example/Pods-ThreeLevelAccordian_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EEF234E96F4DA722032866AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FE8C02471B2172B5D31D1D81 /* Pods-ThreeLevelAccordian_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Tests/Pods-ThreeLevelAccordian_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +113,11 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				BC382BE11D9FEBE5002D7FA2 /* MyExpandIcon.png */,
+				BC382BE31D9FEBF3002D7FA2 /* MyCollapseIcon.png */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				BCFEEDF31D9E75ED005741EF /* bathroom_darkgreen.png */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for ThreeLevelAccordian";
@@ -246,9 +255,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC382BE21D9FEBE5002D7FA2 /* MyExpandIcon.png in Resources */,
+				BC382BE41D9FEBF3002D7FA2 /* MyCollapseIcon.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				BCFEEDF41D9E75ED005741EF /* bathroom_darkgreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -477,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

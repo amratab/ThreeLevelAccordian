@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class ThreeLevelAccordian {
+public class ThreeLevelAccordian {
+
+    public var controller: TLAViewController!
     
-    init(tableView: UITableView, cells: [Item]) {
-        let controller = TLAViewController()
-        controller.tableView = tableView
-        controller.cells = cells
+    public init(cells: [TLACell], options: [TLAOption]?, reuseIdentifier: String) {
+        controller = TLAViewController.init(cells: cells, options: options, reuseIdentifier: reuseIdentifier)
     }
     
 }
