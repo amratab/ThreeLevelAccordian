@@ -24,15 +24,74 @@ pod "ThreeLevelAccordian"
 ```
 
 ##Basic Usage
-
-
-## Customisations
-There are three types of cells for three levels of Arcadian:
+	There are three types of cells for three levels of Arcadian:
 	1) TLAHeaderItem: This is the highest level cell.
 	2) TLACell: This is the second level cell.
 	3) TLASubItem: This is the innermost cell.
+	
+	Setup your tableView whichever way you want before initializing ThreeLevelAccordian. If you wish, you can set the background color 	   and other properties, and they will be retained if you do not override them with options.
+	
+	Find the basic code below:
 
-	You can either specify single customisation values for all cells through the parameters given below:
+	import ThreeLevelAccordian
+
+	class ViewController: UIViewController, TLADelegate {
+		@IBOutlet weak var tableView: UITableView!
+    		var cells = [TLACell]()
+   		var delegateController: TLAViewController! //This is very very important
+
+    		override func viewDidLoad() {
+        		super.viewDidLoad()
+			
+			//Populating data
+			cells.append(TLAHeaderItem(value: "Header1", imageURL: "headerImage1"))
+        		cells.append(TLACell(value: "Middle item1", imageURL: "cellImage1"))
+        		cells.append(TLASubItem(value: "Lower item1", imageURL: "subItemImage1"))
+        		cells.append(TLACell(value: "Middle item2", imageURL: "cellImage2"))
+        		cells.append(TLASubItem(value: "Lower item2", imageURL: "subItemImage2"))
+       			cells.append(TLACell(value: "Middle item3", imageURL: "cellImage3"))
+
+			cells.append(TLAHeaderItem(value: "Header2", imageURL: "headerImage2"))
+			cells.append(TLACell(value: "Middle item21", imageURL: "cellImage2"))
+			cells.append(TLASubItem(value: "Lower item21", imageURL: "subItemImage2"))
+			cells.append(TLACell(value: "Middle item22"))
+
+			//Customisation properties..This part is optional
+			 let options: [TLAOption] = [
+			 		.CellBackgroundColor(UIColor.whiteColor()),
+                                       	.CellColor(textColor),
+                                      	.CellFont(UIFont(name: "HelveticaNeue-Medium", size: 14.0)!),
+                                       	.CellHeight(44.0),
+                                       	.UseSingleValues(true),
+                                       
+                                       .UseAccessoryIcons(true),
+                                       .ExpandIcon(UIImage(named: "MyExpandIcon.png")!),
+                                       .CollapseIcon(UIImage(named: "MyCollapseIcon.png")!),
+			 ]
+			 
+			//Not optional :) 
+			//Specify for cell reuse identifier here
+			let threeLevelAccordian = ThreeLevelAccordian.init(cells: cells, options: options, reuseIdentifier: 					"checklistAccordianCell") 
+			threeLevelAccordian.delegate = self
+			
+			//The next three lines are extremely important
+			delegateController = threeLevelAccordian.controller
+			tableView.dataSource = delegateController
+			tableView.delegate = delegateController
+			
+			tableView.reloadData()
+		}
+		
+		//Delegate function
+		func didSelectItemAtIndex(index: Int) {
+			let alertController = UIAlertController(title: "Clicked", message: "Clicked \(index)", preferredStyle: 					UIAlertControllerStyle.Alert)
+			alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+			self.presentViewController(alertController, animated: true, completion: nil)
+    		}
+	}
+
+## Customisations
+	You can either specify single customisation values for all cell types through the parameters given below:
 	1) CellBackgroundColor
 	2) CellColor: Text color
 	3) CellHeight
@@ -66,6 +125,7 @@ There are three types of cells for three levels of Arcadian:
 	2) ExpandIcon
 	3) CollapseIcon
 
+	You can use these options as shown in the Basic Usage section.
 ## Author
 
 Amrata Baghel, amrata.baghel@gmail.com
