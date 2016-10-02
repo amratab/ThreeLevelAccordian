@@ -15,9 +15,30 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		BC382BE21D9FEBE5002D7FA2 /* MyExpandIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC382BE11D9FEBE5002D7FA2 /* MyExpandIcon.png */; };
-		BC382BE41D9FEBF3002D7FA2 /* MyCollapseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC382BE31D9FEBF3002D7FA2 /* MyCollapseIcon.png */; };
-		BCFEEDF41D9E75ED005741EF /* bathroom_darkgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BCFEEDF31D9E75ED005741EF /* bathroom_darkgreen.png */; };
+		BCD8279D1DA0EE82004C80D0 /* back_room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827871DA0EE82004C80D0 /* back_room_grey_32.png */; };
+		BCD8279E1DA0EE82004C80D0 /* bathroom_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827881DA0EE82004C80D0 /* bathroom_grey_32.png */; };
+		BCD8279F1DA0EE82004C80D0 /* bedroom_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827891DA0EE82004C80D0 /* bedroom_grey_32.png */; };
+		BCD827A01DA0EE82004C80D0 /* conservatory_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8278A1DA0EE82004C80D0 /* conservatory_grey_32.png */; };
+		BCD827A11DA0EE82004C80D0 /* custom_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8278B1DA0EE82004C80D0 /* custom_grey_32.png */; };
+		BCD827A21DA0EE82004C80D0 /* dining_area_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8278C1DA0EE82004C80D0 /* dining_area_grey_32.png */; };
+		BCD827A31DA0EE82004C80D0 /* dining_room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8278D1DA0EE82004C80D0 /* dining_room_grey_32.png */; };
+		BCD827A41DA0EE82004C80D0 /* entrance_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8278E1DA0EE82004C80D0 /* entrance_grey_32.png */; };
+		BCD827A51DA0EE82004C80D0 /* hall_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8278F1DA0EE82004C80D0 /* hall_grey_32.png */; };
+		BCD827A61DA0EE82004C80D0 /* hallway_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827901DA0EE82004C80D0 /* hallway_grey_32.png */; };
+		BCD827A71DA0EE82004C80D0 /* ironing_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827911DA0EE82004C80D0 /* ironing_grey_32.png */; };
+		BCD827A81DA0EE82004C80D0 /* kitchen_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827921DA0EE82004C80D0 /* kitchen_grey_32.png */; };
+		BCD827A91DA0EE82004C80D0 /* living_room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827931DA0EE82004C80D0 /* living_room_grey_32.png */; };
+		BCD827AA1DA0EE82004C80D0 /* lounge_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827941DA0EE82004C80D0 /* lounge_grey_32.png */; };
+		BCD827AB1DA0EE82004C80D0 /* reception_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827951DA0EE82004C80D0 /* reception_grey_32.png */; };
+		BCD827AC1DA0EE82004C80D0 /* room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827961DA0EE82004C80D0 /* room_grey_32.png */; };
+		BCD827AD1DA0EE82004C80D0 /* stairs_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827971DA0EE82004C80D0 /* stairs_grey_32.png */; };
+		BCD827AE1DA0EE82004C80D0 /* stairs_optional_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827981DA0EE82004C80D0 /* stairs_optional_grey_32.png */; };
+		BCD827AF1DA0EE82004C80D0 /* store_room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827991DA0EE82004C80D0 /* store_room_grey_32.png */; };
+		BCD827B01DA0EE82004C80D0 /* study_room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8279A1DA0EE82004C80D0 /* study_room_grey_32.png */; };
+		BCD827B11DA0EE82004C80D0 /* toilet_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8279B1DA0EE82004C80D0 /* toilet_grey_32.png */; };
+		BCD827B21DA0EE82004C80D0 /* utility_room_grey_32.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD8279C1DA0EE82004C80D0 /* utility_room_grey_32.png */; };
+		BCD827B41DA12229004C80D0 /* MyCollapseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827B31DA12229004C80D0 /* MyCollapseIcon.png */; };
+		BCD827B81DA1233B004C80D0 /* MyExpandIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD827B71DA1233B004C80D0 /* MyExpandIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +68,30 @@
 		78625126E78F78ADB3AF0200 /* Pods-ThreeLevelAccordian_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Tests/Pods-ThreeLevelAccordian_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B6E009697CBF9DBFC4ADE42 /* Pods-ThreeLevelAccordian_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Example/Pods-ThreeLevelAccordian_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9C775CBE213FE1D97E0445E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		BC382BE11D9FEBE5002D7FA2 /* MyExpandIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyExpandIcon.png; sourceTree = "<group>"; };
-		BC382BE31D9FEBF3002D7FA2 /* MyCollapseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCollapseIcon.png; sourceTree = "<group>"; };
-		BCFEEDF31D9E75ED005741EF /* bathroom_darkgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bathroom_darkgreen.png; sourceTree = "<group>"; };
+		BCD827871DA0EE82004C80D0 /* back_room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_room_grey_32.png; sourceTree = "<group>"; };
+		BCD827881DA0EE82004C80D0 /* bathroom_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bathroom_grey_32.png; sourceTree = "<group>"; };
+		BCD827891DA0EE82004C80D0 /* bedroom_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bedroom_grey_32.png; sourceTree = "<group>"; };
+		BCD8278A1DA0EE82004C80D0 /* conservatory_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conservatory_grey_32.png; sourceTree = "<group>"; };
+		BCD8278B1DA0EE82004C80D0 /* custom_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_grey_32.png; sourceTree = "<group>"; };
+		BCD8278C1DA0EE82004C80D0 /* dining_area_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dining_area_grey_32.png; sourceTree = "<group>"; };
+		BCD8278D1DA0EE82004C80D0 /* dining_room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dining_room_grey_32.png; sourceTree = "<group>"; };
+		BCD8278E1DA0EE82004C80D0 /* entrance_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = entrance_grey_32.png; sourceTree = "<group>"; };
+		BCD8278F1DA0EE82004C80D0 /* hall_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hall_grey_32.png; sourceTree = "<group>"; };
+		BCD827901DA0EE82004C80D0 /* hallway_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hallway_grey_32.png; sourceTree = "<group>"; };
+		BCD827911DA0EE82004C80D0 /* ironing_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ironing_grey_32.png; sourceTree = "<group>"; };
+		BCD827921DA0EE82004C80D0 /* kitchen_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitchen_grey_32.png; sourceTree = "<group>"; };
+		BCD827931DA0EE82004C80D0 /* living_room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = living_room_grey_32.png; sourceTree = "<group>"; };
+		BCD827941DA0EE82004C80D0 /* lounge_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lounge_grey_32.png; sourceTree = "<group>"; };
+		BCD827951DA0EE82004C80D0 /* reception_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reception_grey_32.png; sourceTree = "<group>"; };
+		BCD827961DA0EE82004C80D0 /* room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_grey_32.png; sourceTree = "<group>"; };
+		BCD827971DA0EE82004C80D0 /* stairs_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stairs_grey_32.png; sourceTree = "<group>"; };
+		BCD827981DA0EE82004C80D0 /* stairs_optional_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stairs_optional_grey_32.png; sourceTree = "<group>"; };
+		BCD827991DA0EE82004C80D0 /* store_room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store_room_grey_32.png; sourceTree = "<group>"; };
+		BCD8279A1DA0EE82004C80D0 /* study_room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study_room_grey_32.png; sourceTree = "<group>"; };
+		BCD8279B1DA0EE82004C80D0 /* toilet_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toilet_grey_32.png; sourceTree = "<group>"; };
+		BCD8279C1DA0EE82004C80D0 /* utility_room_grey_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility_room_grey_32.png; sourceTree = "<group>"; };
+		BCD827B31DA12229004C80D0 /* MyCollapseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCollapseIcon.png; sourceTree = "<group>"; };
+		BCD827B71DA1233B004C80D0 /* MyExpandIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyExpandIcon.png; sourceTree = "<group>"; };
 		DF0874A0CAA63E89D0E7AFCD /* Pods-ThreeLevelAccordian_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Example/Pods-ThreeLevelAccordian_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EEF234E96F4DA722032866AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FE8C02471B2172B5D31D1D81 /* Pods-ThreeLevelAccordian_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelAccordian_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThreeLevelAccordian_Tests/Pods-ThreeLevelAccordian_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,11 +155,32 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				BC382BE11D9FEBE5002D7FA2 /* MyExpandIcon.png */,
-				BC382BE31D9FEBF3002D7FA2 /* MyCollapseIcon.png */,
+				BCD827B31DA12229004C80D0 /* MyCollapseIcon.png */,
+				BCD827871DA0EE82004C80D0 /* back_room_grey_32.png */,
+				BCD827881DA0EE82004C80D0 /* bathroom_grey_32.png */,
+				BCD827B71DA1233B004C80D0 /* MyExpandIcon.png */,
+				BCD827891DA0EE82004C80D0 /* bedroom_grey_32.png */,
+				BCD8278A1DA0EE82004C80D0 /* conservatory_grey_32.png */,
+				BCD8278B1DA0EE82004C80D0 /* custom_grey_32.png */,
+				BCD8278C1DA0EE82004C80D0 /* dining_area_grey_32.png */,
+				BCD8278D1DA0EE82004C80D0 /* dining_room_grey_32.png */,
+				BCD8278E1DA0EE82004C80D0 /* entrance_grey_32.png */,
+				BCD8278F1DA0EE82004C80D0 /* hall_grey_32.png */,
+				BCD827901DA0EE82004C80D0 /* hallway_grey_32.png */,
+				BCD827911DA0EE82004C80D0 /* ironing_grey_32.png */,
+				BCD827921DA0EE82004C80D0 /* kitchen_grey_32.png */,
+				BCD827931DA0EE82004C80D0 /* living_room_grey_32.png */,
+				BCD827941DA0EE82004C80D0 /* lounge_grey_32.png */,
+				BCD827951DA0EE82004C80D0 /* reception_grey_32.png */,
+				BCD827961DA0EE82004C80D0 /* room_grey_32.png */,
+				BCD827971DA0EE82004C80D0 /* stairs_grey_32.png */,
+				BCD827981DA0EE82004C80D0 /* stairs_optional_grey_32.png */,
+				BCD827991DA0EE82004C80D0 /* store_room_grey_32.png */,
+				BCD8279A1DA0EE82004C80D0 /* study_room_grey_32.png */,
+				BCD8279B1DA0EE82004C80D0 /* toilet_grey_32.png */,
+				BCD8279C1DA0EE82004C80D0 /* utility_room_grey_32.png */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				BCFEEDF31D9E75ED005741EF /* bathroom_darkgreen.png */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for ThreeLevelAccordian";
@@ -255,12 +318,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC382BE21D9FEBE5002D7FA2 /* MyExpandIcon.png in Resources */,
-				BC382BE41D9FEBF3002D7FA2 /* MyCollapseIcon.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				BCD827A31DA0EE82004C80D0 /* dining_room_grey_32.png in Resources */,
+				BCD827B21DA0EE82004C80D0 /* utility_room_grey_32.png in Resources */,
+				BCD827B01DA0EE82004C80D0 /* study_room_grey_32.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				BCD827A61DA0EE82004C80D0 /* hallway_grey_32.png in Resources */,
+				BCD827AC1DA0EE82004C80D0 /* room_grey_32.png in Resources */,
+				BCD827AD1DA0EE82004C80D0 /* stairs_grey_32.png in Resources */,
+				BCD827B41DA12229004C80D0 /* MyCollapseIcon.png in Resources */,
+				BCD827AF1DA0EE82004C80D0 /* store_room_grey_32.png in Resources */,
+				BCD827B81DA1233B004C80D0 /* MyExpandIcon.png in Resources */,
+				BCD827A11DA0EE82004C80D0 /* custom_grey_32.png in Resources */,
+				BCD827AB1DA0EE82004C80D0 /* reception_grey_32.png in Resources */,
+				BCD827A41DA0EE82004C80D0 /* entrance_grey_32.png in Resources */,
+				BCD8279F1DA0EE82004C80D0 /* bedroom_grey_32.png in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				BCFEEDF41D9E75ED005741EF /* bathroom_darkgreen.png in Resources */,
+				BCD827AE1DA0EE82004C80D0 /* stairs_optional_grey_32.png in Resources */,
+				BCD827A71DA0EE82004C80D0 /* ironing_grey_32.png in Resources */,
+				BCD827A91DA0EE82004C80D0 /* living_room_grey_32.png in Resources */,
+				BCD827B11DA0EE82004C80D0 /* toilet_grey_32.png in Resources */,
+				BCD827A81DA0EE82004C80D0 /* kitchen_grey_32.png in Resources */,
+				BCD827A21DA0EE82004C80D0 /* dining_area_grey_32.png in Resources */,
+				BCD8279D1DA0EE82004C80D0 /* back_room_grey_32.png in Resources */,
+				BCD827A01DA0EE82004C80D0 /* conservatory_grey_32.png in Resources */,
+				BCD827A51DA0EE82004C80D0 /* hall_grey_32.png in Resources */,
+				BCD8279E1DA0EE82004C80D0 /* bathroom_grey_32.png in Resources */,
+				BCD827AA1DA0EE82004C80D0 /* lounge_grey_32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

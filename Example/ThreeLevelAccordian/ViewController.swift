@@ -17,63 +17,67 @@ class ViewController: UIViewController, TLADelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Checklist"
         
         let backgroundColor = UIColor(red: 237.0 / 255.0, green: 254.0 / 255.0, blue: 249.0 / 255.0, alpha: 1.0)
         let textColor = UIColor(red: 31.0 / 255.0, green: 217.0 / 255.0, blue: 185.0 / 255.0, alpha: 1.0)
-//        var textColorHere = UIColor(red: 153.0 / 255.0, green: 153.0 / 255.0, blue: 153.0 / 255.0, alpha: 1.0)
         
-        cells.append(TLAHeaderItem(value: "Header1", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item1", imageURL: "bathroom_darkgreen"))
-        cells.append(TLASubItem(value: "Lower item1", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item2", imageURL: "bathroom_darkgreen"))
-        cells.append(TLASubItem(value: "Lower item2", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item3", imageURL: "bathroom_darkgreen"))
-//        cells.append(TLASubItem(value: "Lower item3"))
+        cells.append(TLAHeaderItem(value: "Bathroom", imageURL: "bathroom_grey_32.png"))
+        cells.append(TLACell(value: "Shower"))
+        cells.append(TLASubItem(value: "Shower pores should be cleaned effectively by brushing."))
+        cells.append(TLACell(value: "Tap"))
+        cells.append(TLASubItem(value: "Taps must be washed with soap and all the salt removed."))
+        cells.append(TLACell(value: "Toilet", imageURL: "toilet_grey_32.png"))
+        cells.append(TLASubItem(value: "Should be made stains and germs free."))
 
-        cells.append(TLAHeaderItem(value: "Header2", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item21", imageURL: "bathroom_darkgreen"))
-        cells.append(TLASubItem(value: "Lower item21", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item22"))
-//        cells.append(TLASubItem(value: "Lower item22"))
+        cells.append(TLAHeaderItem(value: "Bedroom", imageURL: "bedroom_grey_32.png"))
+        cells.append(TLACell(value: "Bed"))
+        cells.append(TLASubItem(value: "Remove all the dust."))
+        cells.append(TLACell(value: "Dressing"))
 
-        cells.append(TLACell(value: "Middle item23", imageURL: "bathroom_darkgreen"))
-        cells.append(TLASubItem(value: "Lower item23"))
-        cells.append(TLAHeaderItem(value: "Header3", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item31"))
-//        cells.append(TLASubItem(value: "Lower item31"))
-
-        cells.append(TLACell(value: "Middle item32"))
-        cells.append(TLASubItem(value: "Lower item32", imageURL: "bathroom_darkgreen"))
-        cells.append(TLACell(value: "Middle item33"))
-        cells.append(TLASubItem(value: "Lower item33"))
+        
+        cells.append(TLAHeaderItem(value: "Kitchen", imageURL: "kitchen_grey_32.png"))
+        cells.append(TLACell(value: "Utensils"))
+        cells.append(TLASubItem(value: "There are many type of utensils like tongs, rolling pin, pan, non stick pans. Wash them all."))
+        cells.append(TLACell(value: "Sink"))
+        cells.append(TLASubItem(value: "Clean the sink"))
+        
+        cells.append(TLAHeaderItem(value: "Hallway", imageURL: "hallway_grey_32.png"))
+        cells.append(TLACell(value: "Stairs", imageURL: "stairs_grey_32.png"))
+        cells.append(TLASubItem(value: "One stair, two stair, three stair, all stairs clean clean."))
+        cells.append(TLACell(value: "Hall"))
+        cells.append(TLASubItem(value: "Clean the hall", imageURL: "hall_grey_32.png"))
+        
+        cells.append(TLAHeaderItem(value: "Lounge", imageURL: "lounge_grey_32.png"))
+        cells.append(TLACell(value: "dining_area", imageURL: "dining_area_grey_32.png"))
+        cells.append(TLASubItem(value: "All tables and chairs scrubbed for dust and germs."))
         
         
-        let options: [TLAOption] = [ .CellBackgroundColor(UIColor.whiteColor()),
-                                       .CellColor(textColor),
-                                       .CellFont(UIFont(name: "HelveticaNeue-Medium", size: 14.0)!),
-                                       .CellHeight(44.0),
-                                       .UseSingleValues(true),
-                                       
-                                       .UseAccessoryIcons(true),
-                                       .ExpandIcon(UIImage(named: "MyExpandIcon.png")!),
-                                       .CollapseIcon(UIImage(named: "MyCollapseIcon.png")!),
-            
-                                       .HeaderTextFont(UIFont(name: "HelveticaNeue-Medium", size: 20.0)!),
-                                       .HeaderTextColor(UIColor.redColor()),
-                                       .HeaderCellBackgroundColor(UIColor.cyanColor()),
-                                       .HeaderCellHeight(150.0),
-                                       
-                                       .SubItemTextFont(UIFont(name: "HelveticaNeue-Medium", size: 10.0)!),
-                                       .SubItemTextColor(UIColor.purpleColor()),
-                                       .SubItemCellBackgroundColor(UIColor.darkGrayColor()),
-                                       .SubItemCellHeight(100.0),
-                                       .IsMultiline(false),
-                                       
-                                       .ItemTextFont(UIFont(name: "HelveticaNeue-Medium", size: 15.0)!),
-                                       .ItemTextColor(UIColor.brownColor()),
-                                       .ItemCellBackgroundColor(UIColor.whiteColor()),
-                                       .ItemCellHeight(50.0)
-        ]
+        cells.append(TLAHeaderItem(value: "Study Room", imageURL: "study_room_grey_32.png"))
+        
+        cells.append(TLAHeaderItem(value: "Conservatory", imageURL: "conservatory_grey_32.png"))
+        cells.append(TLACell(value: "Utilities", imageURL: "utility_room_grey_32.png"))
+        cells.append(TLASubItem(value: "Clean! Clean!"))
+        
+        
+        cells.append(TLAHeaderItem(value: "Entrance", imageURL: "entrance_grey_32.png"))
+        cells.append(TLACell(value: "Back Room", imageURL: "back_room_grey_32.png"))
+        cells.append(TLASubItem(value: "Clean! Clean!"))
+        
+        
+        let options: [TLAOption] = [
+            .CellColor(textColor),
+            .UseSingleValues(true),
+            .UseAccessoryIcons(true),
+            .ExpandIcon(UIImage(named: "MyExpandIcon.png")!),
+            .CollapseIcon(UIImage(named: "MyCollapseIcon.png")!),
+            .HeaderTextFont(UIFont.systemFontOfSize(CGFloat(15.0))),
+            .HeaderCellBackgroundColor(backgroundColor),
+            .SubItemTextFont(UIFont.systemFontOfSize(CGFloat(12.0))),
+            .SubItemCellBackgroundColor(UIColor.whiteColor()),
+            .ItemTextFont(UIFont.systemFontOfSize(CGFloat(14.0))),
+            .ItemCellBackgroundColor(UIColor.whiteColor()),
+            ]
         
         let threeLevelAccordian = ThreeLevelAccordian.init(cells: cells, options: options, reuseIdentifier: "checklistAccordianCell")
         threeLevelAccordian.delegate = self
@@ -81,19 +85,14 @@ class ViewController: UIViewController, TLADelegate {
         tableView.dataSource = delegateController
         tableView.delegate = delegateController
         tableView.reloadData()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func didSelectItemAtIndex(index: Int) {
-        let alertController = UIAlertController(title: "Clicked", message: "Clicked \(index)", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        if self.cells[index] as? TLASubItem != nil {
+            let alertController = UIAlertController(title: "Clicked", message: "Clicked \(index)", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 

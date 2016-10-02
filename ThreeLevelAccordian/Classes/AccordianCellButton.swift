@@ -2,8 +2,8 @@
 //  AccordianCellButton.swift
 //  cleanilycustomers
 //
-//  Created by Sahil Dhankhar on 30/05/16.
-//  Copyright © 2016 Dhankhars. All rights reserved.
+//  Created by Amrata Baghel on 09/30/2016.
+//  Copyright (c) 2016 Amrata Baghel. All rights reserved.
 //
 
 import UIKit

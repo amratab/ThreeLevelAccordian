@@ -2,8 +2,8 @@
 //  ThreeLevelAccordian.swift
 //  Pods
 //
-//  Created by Sahil Dhankhar on 30/09/16.
-//
+//  Created by Amrata Baghel on 30/09/16.
+//  Copyright (c) 2016 Amrata Baghel. All rights reserved.
 //
 
 import Foundation

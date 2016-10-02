@@ -2,8 +2,8 @@
 //  TLAViewController.swift
 //  Pods
 //
-//  Created by Sahil Dhankhar on 30/09/16.
-//
+//  Created by Amrata Baghel on 30/09/16.
+//  Copyright (c) 2016 Amrata Baghel. All rights reserved.
 //
 
 import UIKit
@@ -166,7 +166,8 @@ public class TLAViewController: UIViewController {
     
     func isExpandable(headerIndex: Int) -> Bool {
         if self.cells[headerIndex] is TLAHeaderItem {
-            if headerIndex + 1 < self.cells.count && !(self.cells[headerIndex+1] is TLASubItem) {
+            if headerIndex + 1 < self.cells.count && !(self.cells[headerIndex+1] is TLASubItem) &&
+            !(self.cells[headerIndex+1] is TLAHeaderItem) {
                 return true
             }
         } else if !(self.cells[headerIndex] is TLASubItem) {
@@ -408,6 +409,10 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             return AccordianCellAccessoryView.getCellAccessory(type)
         }
         return nil
+    }
+    
+    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
     }
     
     func updateHiddenItems(tableView: UITableView) {
