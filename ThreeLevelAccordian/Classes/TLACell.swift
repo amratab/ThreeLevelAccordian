@@ -13,23 +13,26 @@ public class TLACell {
     var isHidden: Bool
     var isExpanded: Bool
     var value: AnyObject
-    public init(_ hidden: Bool = true, value: AnyObject, isExpanded: Bool = false) {
+    var imageURL:String?
+
+    public init(_ hidden: Bool = true, value: AnyObject, isExpanded: Bool = false, imageURL: String? = nil) {
         self.isHidden = hidden
         self.value = value
         self.isExpanded = isExpanded
+        self.imageURL = imageURL
     }
 }
 
 public class TLAHeaderItem: TLACell {
-    var imageURL:String?
-    public init (value: AnyObject, imageURL: String) {
+    public init (value: AnyObject, imageURL: String? = nil) {
         super.init(false, value: value)
         self.imageURL = imageURL
     }
 }
 
 public class TLASubItem: TLACell {
-    public init(value: AnyObject) {
+    public init(value: AnyObject, imageURL: String? = nil) {
         super.init(true, value: value)
+        self.imageURL = imageURL
     }
 }

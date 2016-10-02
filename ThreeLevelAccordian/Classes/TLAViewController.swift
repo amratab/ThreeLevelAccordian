@@ -238,13 +238,15 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier) {
             cell.textLabel?.text = value
             let label = cell.textLabel!
-            if let headerItem = item as? TLAHeaderItem {
+            cell.imageView?.image = nil
+            if let headerImage = item.imageURL, image = UIImage(named: headerImage) {
+                cell.imageView?.image = image
+            }
+            if let _ = item as? TLAHeaderItem {
                 if let headerFont = headerCellFont {
                     cell.textLabel?.font = headerFont
                 }
-                if let headerImage = headerItem.imageURL, image = UIImage(named: headerImage) {
-                    cell.imageView?.image = image
-                }
+                
                 
                 if let accessoryView = accessory(for: indexPath, and: .Expand) {
                     cell.accessoryView = accessoryView
@@ -265,7 +267,6 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                     label.sizeToFit()
                 }
                 
-                cell.imageView?.image = nil
                 cell.accessoryView = nil
                 cell.accessoryType = UITableViewCellAccessoryType.None
                 
@@ -293,7 +294,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
 //                label.numberOfLines = 0
 //                label.sizeToFit()
                 
-                cell.imageView?.image = nil
+//                cell.imageView?.image = nil
                 
                 if let accessoryView = accessory(for: indexPath, and: .Expand) {
                     cell.accessoryView = accessoryView
