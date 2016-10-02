@@ -281,11 +281,6 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 if let subItemCellFont = self.subItemCellFont {
                     cell.textLabel?.font = subItemCellFont
                 }
-//                if let accessoryView = accessory(for: indexPath, and: .Expand) {
-//                    cell.accessoryView = accessoryView
-//                } else {
-//                    cell.accessoryType = UITableViewCellAccessoryType.None
-//                }
             } else {
                 if let itemCellBackgrondColor = self.itemCellBackgrondColor {
                     cell.backgroundColor = itemCellBackgrondColor
@@ -296,18 +291,6 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 if let itemCellFont = self.itemCellFont {
                     cell.textLabel?.font = itemCellFont
                 }
-                
-//                label.lineBreakMode = NSLineBreakMode.ByWordWrapping
-//                label.numberOfLines = 0
-//                label.sizeToFit()
-                
-//                cell.imageView?.image = nil
-//                
-//                if let accessoryView = accessory(for: indexPath, and: .Expand) {
-//                    cell.accessoryView = accessoryView
-//                } else {
-//                    cell.accessoryType = UITableViewCellAccessoryType.None
-//                }
             }
             
             return cell
