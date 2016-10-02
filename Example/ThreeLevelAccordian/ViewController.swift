@@ -17,6 +17,11 @@ class ViewController: UIViewController, TLADelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundColor = UIColor(red: 237.0 / 255.0, green: 254.0 / 255.0, blue: 249.0 / 255.0, alpha: 1.0)
+        let textColor = UIColor(red: 31.0 / 255.0, green: 217.0 / 255.0, blue: 185.0 / 255.0, alpha: 1.0)
+//        var textColorHere = UIColor(red: 153.0 / 255.0, green: 153.0 / 255.0, blue: 153.0 / 255.0, alpha: 1.0)
+        
         cells.append(TLAHeaderItem(value: "Header1", imageURL: "bathroom_darkgreen"))
         cells.append(TLACell(value: "Middle item1", imageURL: "bathroom_darkgreen"))
         cells.append(TLASubItem(value: "Lower item1", imageURL: "bathroom_darkgreen"))
@@ -43,11 +48,11 @@ class ViewController: UIViewController, TLADelegate {
         cells.append(TLASubItem(value: "Lower item33"))
         
         
-        let options: [TLAOption] = [ .CellBackgroundColor(UIColor.lightGrayColor()),
-                                       .CellColor(UIColor.blueColor()),
+        let options: [TLAOption] = [ .CellBackgroundColor(UIColor.whiteColor()),
+                                       .CellColor(textColor),
                                        .CellFont(UIFont(name: "HelveticaNeue-Medium", size: 14.0)!),
-                                       .CellHeight(100.0),
-                                       .UseSingleValues(false),
+                                       .CellHeight(44.0),
+                                       .UseSingleValues(true),
                                        
                                        .UseAccessoryIcons(true),
                                        .ExpandIcon(UIImage(named: "MyExpandIcon.png")!),
@@ -67,7 +72,8 @@ class ViewController: UIViewController, TLADelegate {
                                        .ItemTextFont(UIFont(name: "HelveticaNeue-Medium", size: 15.0)!),
                                        .ItemTextColor(UIColor.brownColor()),
                                        .ItemCellBackgroundColor(UIColor.whiteColor()),
-                                       .ItemCellHeight(50.0)]
+                                       .ItemCellHeight(50.0)
+        ]
         
         let threeLevelAccordian = ThreeLevelAccordian.init(cells: cells, options: options, reuseIdentifier: "checklistAccordianCell")
         threeLevelAccordian.delegate = self

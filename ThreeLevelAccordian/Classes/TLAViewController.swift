@@ -143,7 +143,7 @@ public class TLAViewController: UIViewController {
             if let cellBackgroundColor = cellBackgroundColor {
                 headerCellBackgrondColor = cellBackgroundColor
                 subItemCellBackgrondColor = cellBackgroundColor
-                itemCellTextColor = cellBackgroundColor
+                itemCellBackgrondColor = cellBackgroundColor
             }
         }
     }
