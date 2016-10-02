@@ -243,18 +243,19 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             if let headerImage = item.imageURL, image = UIImage(named: headerImage) {
                 cell.imageView?.image = image
             }
+            if let accessoryView = accessory(for: indexPath, and: .Expand) {
+                cell.accessoryView = accessoryView
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.accessoryView = nil
+            }
+
             if let _ = item as? TLAHeaderItem {
                 if let headerFont = headerCellFont {
                     cell.textLabel?.font = headerFont
                 }
                 
                 
-                if let accessoryView = accessory(for: indexPath, and: .Expand) {
-                    cell.accessoryView = accessoryView
-                } else {
-                    cell.accessoryType = UITableViewCellAccessoryType.None
-                }
-
                 if let headerCellBackgroundColor = self.headerCellBackgrondColor {
                     cell.backgroundColor = headerCellBackgroundColor
                 }
@@ -280,6 +281,11 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 if let subItemCellFont = self.subItemCellFont {
                     cell.textLabel?.font = subItemCellFont
                 }
+//                if let accessoryView = accessory(for: indexPath, and: .Expand) {
+//                    cell.accessoryView = accessoryView
+//                } else {
+//                    cell.accessoryType = UITableViewCellAccessoryType.None
+//                }
             } else {
                 if let itemCellBackgrondColor = self.itemCellBackgrondColor {
                     cell.backgroundColor = itemCellBackgrondColor
@@ -296,12 +302,12 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
 //                label.sizeToFit()
                 
 //                cell.imageView?.image = nil
-                
-                if let accessoryView = accessory(for: indexPath, and: .Expand) {
-                    cell.accessoryView = accessoryView
-                } else {
-                    cell.accessoryType = UITableViewCellAccessoryType.None
-                }
+//                
+//                if let accessoryView = accessory(for: indexPath, and: .Expand) {
+//                    cell.accessoryView = accessoryView
+//                } else {
+//                    cell.accessoryType = UITableViewCellAccessoryType.None
+//                }
             }
             
             return cell
@@ -329,6 +335,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                     previousCell?.accessoryView = accessoryView
                 } else {
                     previousCell?.accessoryType = UITableViewCellAccessoryType.None
+                    previousCell?.accessoryView = nil
                 }
 
                 collapse(previouslySelectedHeaderIndex)
@@ -348,6 +355,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 cell?.accessoryView = accessoryView
             } else {
                 cell?.accessoryType = UITableViewCellAccessoryType.None
+                cell?.accessoryView = nil
             }
             
         } else if (item as? TLASubItem == nil) {
@@ -366,6 +374,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                     previousCell?.accessoryView = accessoryView
                 } else {
                     previousCell?.accessoryType = UITableViewCellAccessoryType.None
+                    previousCell?.accessoryView = nil
                 }
                 collapse(previouslySelectedItemIndex)
             }
@@ -383,6 +392,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 cell?.accessoryView = accessoryView
             } else {
                 cell?.accessoryType = UITableViewCellAccessoryType.None
+                cell?.accessoryView = nil
             }
         }
         if let delegate = delegate {
@@ -424,6 +434,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                     hiddenCell?.accessoryView = accessoryView
                 } else {
                     hiddenCell?.accessoryType = UITableViewCellAccessoryType.None
+                    hiddenCell?.accessoryView = nil
                 }
             }
         }

@@ -14,13 +14,20 @@ class ViewController: UIViewController, TLADelegate {
     @IBOutlet weak var tableView: UITableView!
     var cells = [TLACell]()
     var delegateController: TLAViewController!
+    let allText = ["Bathroom", "Shower", "Shower pores should be cleaned effectively by brushing.", "Tap", "Taps must be washed with soap and all the salt removed.", "Toilet",
+                   "Should be made stains and germs free.", "Bedroom", "Bed", "Remove all the dust.", "Dressing", "Kitchen", "Utensils",
+                   "There are many type of utensils like tongs, rolling pin, pan, non stick pans. Wash them all.", "Sink", "Clean the sink", "Hallway",
+                   "Stairs", "One stair, two stair, three stair, all stairs clean clean.", "Hall", "Clean the hall", "Lounge", "Dining Area",
+                   "All tables and chairs scrubbed for dust and germs.", "Study Room", "Conservatory", "Utilities", "Clean! Clean!", "Entrance", "Back Room", "Clean! Clean!"]
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Checklist"
         
         let backgroundColor = UIColor(red: 237.0 / 255.0, green: 254.0 / 255.0, blue: 249.0 / 255.0, alpha: 1.0)
         let textColor = UIColor(red: 31.0 / 255.0, green: 217.0 / 255.0, blue: 185.0 / 255.0, alpha: 1.0)
+        
         
         cells.append(TLAHeaderItem(value: "Bathroom", imageURL: "bathroom_grey_32.png"))
         cells.append(TLACell(value: "Shower"))
@@ -49,7 +56,7 @@ class ViewController: UIViewController, TLADelegate {
         cells.append(TLASubItem(value: "Clean the hall", imageURL: "hall_grey_32.png"))
         
         cells.append(TLAHeaderItem(value: "Lounge", imageURL: "lounge_grey_32.png"))
-        cells.append(TLACell(value: "dining_area", imageURL: "dining_area_grey_32.png"))
+        cells.append(TLACell(value: "Dining Area", imageURL: "dining_area_grey_32.png"))
         cells.append(TLASubItem(value: "All tables and chairs scrubbed for dust and germs."))
         
         
@@ -66,16 +73,17 @@ class ViewController: UIViewController, TLADelegate {
         
         
         let options: [TLAOption] = [
-            .CellColor(textColor),
-            .UseSingleValues(true),
             .UseAccessoryIcons(true),
             .ExpandIcon(UIImage(named: "MyExpandIcon.png")!),
             .CollapseIcon(UIImage(named: "MyCollapseIcon.png")!),
             .HeaderTextFont(UIFont.systemFontOfSize(CGFloat(15.0))),
+            .HeaderTextColor(textColor),
             .HeaderCellBackgroundColor(backgroundColor),
             .SubItemTextFont(UIFont.systemFontOfSize(CGFloat(12.0))),
+            .SubItemTextColor(UIColor.blackColor()),
             .SubItemCellBackgroundColor(UIColor.whiteColor()),
             .ItemTextFont(UIFont.systemFontOfSize(CGFloat(14.0))),
+            .ItemTextColor(UIColor.blackColor()),
             .ItemCellBackgroundColor(UIColor.whiteColor()),
             ]
         
@@ -89,7 +97,8 @@ class ViewController: UIViewController, TLADelegate {
     
     func didSelectItemAtIndex(index: Int) {
         if self.cells[index] as? TLASubItem != nil {
-            let alertController = UIAlertController(title: "Clicked", message: "Clicked \(index)", preferredStyle: UIAlertControllerStyle.Alert)
+            let theText = allText[index]
+            let alertController = UIAlertController(title: "Clicked", message: "Clicked \(theText)", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
         }

@@ -7,6 +7,7 @@
 
 ThreeLevelAccordian is a three level accordian for IOS. It owes its base code to [SwiftyAccordionCells](https://github.com/justinmfischer/SwiftyAccordionCells). Most of the design is customisable. It goes till three levels. You can customise the font, color, background color of items, add image to them etc. The innermost items can be multiline too. If an element does not have any child elements, expand icon is not shown against them. 
 
+![alt tag](https://github.com/amratab/ThreeLevelAccordian/blob/master/greenBgAccDemo.gif)
 ![alt tag](https://github.com/amratab/ThreeLevelAccordian/blob/master/greenBgAccordianDemo.gif)
 ![alt tag](https://github.com/amratab/ThreeLevelAccordian/blob/master/noCustomisationAccoridanDemo.gif)
 ## Example
