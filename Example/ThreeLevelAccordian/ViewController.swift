@@ -14,12 +14,6 @@ class ViewController: UIViewController, TLADelegate {
     @IBOutlet weak var tableView: UITableView!
     var cells = [TLACell]()
     var delegateController: TLAViewController!
-    let allText = ["Bathroom", "Shower", "Shower pores should be cleaned effectively by brushing.", "Tap", "Taps must be washed with soap and all the salt removed.", "Toilet",
-                   "Should be made stains and germs free.", "Bedroom", "Bed", "Remove all the dust.", "Dressing", "Kitchen", "Utensils",
-                   "There are many type of utensils like tongs, rolling pin, pan, non stick pans. Wash them all.", "Sink", "Clean the sink", "Hallway",
-                   "Stairs", "One stair, two stair, three stair, all stairs clean clean.", "Hall", "Clean the hall", "Lounge", "Dining Area",
-                   "All tables and chairs scrubbed for dust and germs.", "Study Room", "Conservatory", "Utilities", "Clean! Clean!", "Entrance", "Back Room", "Clean! Clean!"]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,8 +91,7 @@ class ViewController: UIViewController, TLADelegate {
     
     func didSelectItemAtIndex(index: Int) {
         if self.cells[index] as? TLASubItem != nil {
-            let theText = allText[index]
-            let alertController = UIAlertController(title: "Clicked", message: "Clicked \(theText)", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertController = UIAlertController(title: "Clicked", message: "Clicked \(index)", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
         }
