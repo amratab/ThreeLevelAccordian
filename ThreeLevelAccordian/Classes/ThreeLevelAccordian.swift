@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 public protocol TLADelegate {
-    func didSelectItemAtIndex(index: Int)
+    func didSelectItemAtIndex(_ index: Int)
 }
 
-public class ThreeLevelAccordian {
+open class ThreeLevelAccordian {
 
-    public var controller: TLAViewController!
+    open var controller: TLAViewController!
     
-    public var delegate: TLADelegate! {
+    open var delegate: TLADelegate! {
         didSet {
             controller.delegate = delegate
         }

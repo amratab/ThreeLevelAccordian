@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 enum AccordianCellButtonType {
-    case Expand
-    case Collapse
+    case expand
+    case collapse
 }
 
 class AccordianCellAccessoryView {
-    static internal func getCellAccessory(type: AccordianCellButtonType) -> UIView{
+    static internal func getCellAccessory(_ type: AccordianCellButtonType) -> UIView{
         return AccordianCellButton.init(type: type) as UIView
     }
     
-    static internal func getCellAccessoryWithCustomImage(image: UIImage) -> UIView{
+    static internal func getCellAccessoryWithCustomImage(_ image: UIImage) -> UIView{
         return AccordianCellButton.init(image: image) as UIView
     }
 }

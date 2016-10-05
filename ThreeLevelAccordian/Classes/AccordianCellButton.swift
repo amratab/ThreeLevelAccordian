@@ -12,25 +12,25 @@ class AccordianCellButton: UIButton {
     
     init(type: AccordianCellButtonType) {
         super.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        self.setImage(imageForType(type)!, forState: .Normal)
+        self.setImage(imageForType(type)!, for: UIControlState())
     }
     
     init(image: UIImage) {
         super.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        self.setImage(image, forState: .Normal)
+        self.setImage(image, for: UIControlState())
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func imageForType(type: AccordianCellButtonType) -> UIImage? {
-        let bundle = NSBundle(forClass: self.dynamicType)
+    func imageForType(_ type: AccordianCellButtonType) -> UIImage? {
+        let bundle = Bundle(for: type(of: self))
         switch(type) {
-        case .Expand :
-            return UIImage(named: "forward_arrow", inBundle: bundle, compatibleWithTraitCollection: nil)
-        case .Collapse:
-            return UIImage(named: "expand_arrow", inBundle: bundle, compatibleWithTraitCollection: nil)
+        case .expand :
+            return UIImage(named: "forward_arrow", in: bundle, compatibleWith: nil)
+        case .collapse:
+            return UIImage(named: "expand_arrow", in: bundle, compatibleWith: nil)
         }
     }
 }

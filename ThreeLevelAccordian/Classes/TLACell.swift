@@ -8,7 +8,7 @@
 import Foundation
 
 
-public class TLACell {
+open class TLACell {
     var isHidden: Bool
     var isExpanded: Bool
     var value: AnyObject
@@ -22,14 +22,14 @@ public class TLACell {
     }
 }
 
-public class TLAHeaderItem: TLACell {
+open class TLAHeaderItem: TLACell {
     public init (value: AnyObject, imageURL: String? = nil) {
         super.init(false, value: value)
         self.imageURL = imageURL
     }
 }
 
-public class TLASubItem: TLACell {
+open class TLASubItem: TLACell {
     public init(value: AnyObject, imageURL: String? = nil) {
         super.init(true, value: value)
         self.imageURL = imageURL

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TLAViewController: UIViewController {
+open class TLAViewController: UIViewController {
     
     var cells: [TLACell] = [TLACell]()
     var properties: [TLAOption] = [TLAOption]()
@@ -54,7 +54,7 @@ public class TLAViewController: UIViewController {
     var previouslySelectedHeaderIndex: Int?
     var previouslySelectedItemIndex: Int?
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
     }
     
@@ -79,47 +79,47 @@ public class TLAViewController: UIViewController {
         for option in properties {
             
             switch (option) {
-            case let .HeaderTextColor(value):
+            case let .headerTextColor(value):
                 headerCellTextColor = value
-            case let .HeaderTextFont(value):
+            case let .headerTextFont(value):
                 headerCellFont = value
-            case let .HeaderCellBackgroundColor(value):
+            case let .headerCellBackgroundColor(value):
                 headerCellBackgrondColor = value
-            case let .HeaderCellHeight(value):
+            case let .headerCellHeight(value):
                 headerCellHeight = value
-            case let .SubItemTextFont(value):
+            case let .subItemTextFont(value):
                 subItemCellFont = value
-            case let .SubItemTextColor(value):
+            case let .subItemTextColor(value):
                 subItemCellTextColor = value
-            case let .SubItemCellBackgroundColor(value):
+            case let .subItemCellBackgroundColor(value):
                 subItemCellBackgrondColor = value
-            case let .SubItemCellHeight(value):
+            case let .subItemCellHeight(value):
                 subItemCellHeight = value
-            case let .IsMultiline(value):
+            case let .isMultiline(value):
                 isMultiline = value
-            case let .ItemTextFont(value):
+            case let .itemTextFont(value):
                 itemCellFont = value
-            case let .ItemTextColor(value):
+            case let .itemTextColor(value):
                 itemCellTextColor = value
-            case let .ItemCellBackgroundColor(value):
+            case let .itemCellBackgroundColor(value):
                 itemCellBackgrondColor = value
-            case let .ItemCellHeight(value):
+            case let .itemCellHeight(value):
                 itemCellHeight = value
-            case let .ExpandIcon(value):
+            case let .expandIcon(value):
                 customExpandImage = value
-            case let .CollapseIcon(value):
+            case let .collapseIcon(value):
                 customCollapseImage = value
-            case let .UseAccessoryIcons(value):
+            case let .useAccessoryIcons(value):
                 useAccessoryImages = value
-            case let .UseSingleValues(value):
+            case let .useSingleValues(value):
                 useSingleValues = value
-            case let .CellFont(value):
+            case let .cellFont(value):
                 cellFont = value
-            case let .CellColor(value):
+            case let .cellColor(value):
                 cellColor = value
-            case let .CellBackgroundColor(value):
+            case let .cellBackgroundColor(value):
                 cellBackgroundColor = value
-            case let .CellHeight(value):
+            case let .cellHeight(value):
                 cellHeight = value
             }
         }
@@ -152,19 +152,19 @@ public class TLAViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public override func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func expand(headerIndex: Int) {
+    func expand(_ headerIndex: Int) {
         self.toggleVisible(headerIndex, isHidden: false)
     }
     
-    func collapse(headerIndex: Int) {
+    func collapse(_ headerIndex: Int) {
         self.toggleVisible(headerIndex, isHidden: true)
     }
     
-    func isExpandable(headerIndex: Int) -> Bool {
+    func isExpandable(_ headerIndex: Int) -> Bool {
         if self.cells[headerIndex] is TLAHeaderItem {
             if headerIndex + 1 < self.cells.count && !(self.cells[headerIndex+1] is TLASubItem) &&
             !(self.cells[headerIndex+1] is TLAHeaderItem) {
@@ -178,7 +178,7 @@ public class TLAViewController: UIViewController {
         return false
     }
     
-    private func toggleVisible(headerIndex: Int, isHidden: Bool) {
+    fileprivate func toggleVisible(_ headerIndex: Int, isHidden: Bool) {
         var headerIdx = headerIndex
         if !(self.cells[headerIdx] is TLASubItem) {
             if (self.cells[headerIdx] is TLAHeaderItem) {
@@ -208,12 +208,12 @@ public class TLAViewController: UIViewController {
 
 extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
     
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.cells.count
     }
     
-    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let item = self.cells[indexPath.row]
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = self.cells[(indexPath as NSIndexPath).row]
         
         if item is TLAHeaderItem {
             return headerCellHeight
@@ -233,20 +233,20 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-   public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let item = self.cells[indexPath.row]
+   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = self.cells[(indexPath as NSIndexPath).row]
         let value = item.value as? String
-        if let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier) {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) {
             cell.textLabel?.text = value
             let label = cell.textLabel!
             cell.imageView?.image = nil
-            if let headerImage = item.imageURL, image = UIImage(named: headerImage) {
+            if let headerImage = item.imageURL, let image = UIImage(named: headerImage) {
                 cell.imageView?.image = image
             }
-            if let accessoryView = accessory(for: indexPath, and: .Expand) {
+            if let accessoryView = accessory(for: indexPath, and: .expand) {
                 cell.accessoryView = accessoryView
             } else {
-                cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.accessoryType = UITableViewCellAccessoryType.none
                 cell.accessoryView = nil
             }
 
@@ -264,13 +264,13 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             } else if (item as? TLASubItem != nil) {
                 if isMultiline {
-                    label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+                    label.lineBreakMode = NSLineBreakMode.byWordWrapping
                     label.numberOfLines = 0
                     label.sizeToFit()
                 }
                 
                 cell.accessoryView = nil
-                cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.accessoryType = UITableViewCellAccessoryType.none
                 
                 if let subItemCellBackgrondColor = self.subItemCellBackgrondColor {
                     cell.backgroundColor = subItemCellBackgrondColor
@@ -299,25 +299,25 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let item = self.cells[indexPath.row]
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.cells[(indexPath as NSIndexPath).row]
+        let cell = tableView.cellForRow(at: indexPath)
         if item is TLAHeaderItem {
             if self.selectedHeaderIndex == nil {
-                self.selectedHeaderIndex = indexPath.row
+                self.selectedHeaderIndex = (indexPath as NSIndexPath).row
             } else {
                 self.previouslySelectedHeaderIndex = self.selectedHeaderIndex
-                self.selectedHeaderIndex = indexPath.row
+                self.selectedHeaderIndex = (indexPath as NSIndexPath).row
             }
             
             if let previouslySelectedHeaderIndex = self.previouslySelectedHeaderIndex {
-                let previousIndexPath = NSIndexPath(forItem: previouslySelectedHeaderIndex, inSection: 0)
-                let previousCell = tableView.cellForRowAtIndexPath(previousIndexPath)
+                let previousIndexPath = IndexPath(item: previouslySelectedHeaderIndex, section: 0)
+                let previousCell = tableView.cellForRow(at: previousIndexPath)
                 
-                if let accessoryView = accessory(for: previousIndexPath, and: .Expand) {
+                if let accessoryView = accessory(for: previousIndexPath, and: .expand) {
                     previousCell?.accessoryView = accessoryView
                 } else {
-                    previousCell?.accessoryType = UITableViewCellAccessoryType.None
+                    previousCell?.accessoryType = UITableViewCellAccessoryType.none
                     previousCell?.accessoryView = nil
                 }
 
@@ -327,9 +327,9 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             var accessoryType: AccordianCellButtonType
             if self.previouslySelectedHeaderIndex != self.selectedHeaderIndex {
                 expand(self.selectedHeaderIndex!)
-                accessoryType = .Collapse
+                accessoryType = .collapse
             } else {
-                accessoryType = .Expand
+                accessoryType = .expand
 
                 self.selectedHeaderIndex = nil
                 self.previouslySelectedHeaderIndex = nil
@@ -337,26 +337,26 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             if let accessoryView = accessory(for: indexPath, and: accessoryType) {
                 cell?.accessoryView = accessoryView
             } else {
-                cell?.accessoryType = UITableViewCellAccessoryType.None
+                cell?.accessoryType = UITableViewCellAccessoryType.none
                 cell?.accessoryView = nil
             }
             
         } else if (item as? TLASubItem == nil) {
             if self.selectedItemIndex == nil {
-                self.selectedItemIndex = indexPath.row
+                self.selectedItemIndex = (indexPath as NSIndexPath).row
             } else {
                 self.previouslySelectedItemIndex = self.selectedItemIndex
-                self.selectedItemIndex = indexPath.row
+                self.selectedItemIndex = (indexPath as NSIndexPath).row
             }
             
             if let previouslySelectedItemIndex = self.previouslySelectedItemIndex {
-                let previousIndexPath = NSIndexPath(forItem: previouslySelectedItemIndex, inSection: 0)
-                let previousCell = tableView.cellForRowAtIndexPath(previousIndexPath)
+                let previousIndexPath = IndexPath(item: previouslySelectedItemIndex, section: 0)
+                let previousCell = tableView.cellForRow(at: previousIndexPath)
 
-                if let accessoryView = accessory(for: previousIndexPath, and: .Expand) {
+                if let accessoryView = accessory(for: previousIndexPath, and: .expand) {
                     previousCell?.accessoryView = accessoryView
                 } else {
-                    previousCell?.accessoryType = UITableViewCellAccessoryType.None
+                    previousCell?.accessoryType = UITableViewCellAccessoryType.none
                     previousCell?.accessoryView = nil
                 }
                 collapse(previouslySelectedItemIndex)
@@ -365,21 +365,21 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             var accessoryType: AccordianCellButtonType
             if self.previouslySelectedItemIndex != self.selectedItemIndex {
                 expand(self.selectedItemIndex!)
-                accessoryType = .Collapse
+                accessoryType = .collapse
             } else {
-                accessoryType = .Expand
+                accessoryType = .expand
                 self.selectedItemIndex = nil
                 self.previouslySelectedItemIndex = nil
             }
             if let accessoryView = accessory(for: indexPath, and: accessoryType) {
                 cell?.accessoryView = accessoryView
             } else {
-                cell?.accessoryType = UITableViewCellAccessoryType.None
+                cell?.accessoryType = UITableViewCellAccessoryType.none
                 cell?.accessoryView = nil
             }
         }
         if let delegate = delegate {
-            delegate.didSelectItemAtIndex(indexPath.row)
+            delegate.didSelectItemAtIndex((indexPath as NSIndexPath).row)
         }
         
         tableView.beginUpdates()
@@ -387,14 +387,14 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
         self.updateHiddenItems(tableView)
     }
     
-    func accessory(for indexPath: NSIndexPath, and type: AccordianCellButtonType) -> UIView? {
-        if useAccessoryImages && isExpandable(indexPath.row) {
-            if type == AccordianCellButtonType.Expand {
+    func accessory(for indexPath: IndexPath, and type: AccordianCellButtonType) -> UIView? {
+        if useAccessoryImages && isExpandable((indexPath as NSIndexPath).row) {
+            if type == AccordianCellButtonType.expand {
                 if let customExpandImage = self.customExpandImage {
                     return AccordianCellAccessoryView.getCellAccessoryWithCustomImage(customExpandImage)
                 }
             }
-            if type == .Collapse {
+            if type == .collapse {
                 if let customCollapseImage = self.customCollapseImage {
                     return AccordianCellAccessoryView.getCellAccessoryWithCustomImage(customCollapseImage)
                 }
@@ -404,19 +404,19 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
         return nil
     }
     
-    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1
     }
     
-    func updateHiddenItems(tableView: UITableView) {
-        for (index, cell) in self.cells.enumerate() {
+    func updateHiddenItems(_ tableView: UITableView) {
+        for (index, cell) in self.cells.enumerated() {
             if ((cell as? TLASubItem == nil) && cell.isHidden) {
-                let indexPath = NSIndexPath(forItem: index, inSection: 0)
-                let hiddenCell = tableView.cellForRowAtIndexPath(indexPath)
-                if let accessoryView = accessory(for: indexPath, and: .Expand) {
+                let indexPath = IndexPath(item: index, section: 0)
+                let hiddenCell = tableView.cellForRow(at: indexPath)
+                if let accessoryView = accessory(for: indexPath, and: .expand) {
                     hiddenCell?.accessoryView = accessoryView
                 } else {
-                    hiddenCell?.accessoryType = UITableViewCellAccessoryType.None
+                    hiddenCell?.accessoryType = UITableViewCellAccessoryType.none
                     hiddenCell?.accessoryView = nil
                 }
             }

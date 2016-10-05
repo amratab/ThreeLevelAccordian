@@ -9,30 +9,30 @@
 import Foundation
 
 public enum TLAOption {
-    case CellFont(UIFont)
-    case CellColor(UIColor)
-    case CellBackgroundColor(UIColor)
-    case CellHeight(CGFloat)
-    case UseSingleValues(Bool)
+    case cellFont(UIFont)
+    case cellColor(UIColor)
+    case cellBackgroundColor(UIColor)
+    case cellHeight(CGFloat)
+    case useSingleValues(Bool)
 
-    case ExpandIcon(UIImage)    //Displayed when the cell is not expanded
-    case CollapseIcon(UIImage)  //Displayed when the cell is already in exapanded state
-    case UseAccessoryIcons(Bool) //Says if accessory views are to be used or not
+    case expandIcon(UIImage)    //Displayed when the cell is not expanded
+    case collapseIcon(UIImage)  //Displayed when the cell is already in exapanded state
+    case useAccessoryIcons(Bool) //Says if accessory views are to be used or not
     
-    case HeaderTextFont(UIFont)
-    case HeaderTextColor(UIColor)
-    case HeaderCellBackgroundColor(UIColor)
-    case HeaderCellHeight(CGFloat)
+    case headerTextFont(UIFont)
+    case headerTextColor(UIColor)
+    case headerCellBackgroundColor(UIColor)
+    case headerCellHeight(CGFloat)
     
-    case SubItemTextFont(UIFont)
-    case SubItemTextColor(UIColor)
-    case SubItemCellBackgroundColor(UIColor)
-    case SubItemCellHeight(CGFloat)
-    case IsMultiline(Bool) //Says if the innermost cell has multiline text or not
+    case subItemTextFont(UIFont)
+    case subItemTextColor(UIColor)
+    case subItemCellBackgroundColor(UIColor)
+    case subItemCellHeight(CGFloat)
+    case isMultiline(Bool) //Says if the innermost cell has multiline text or not
     
-    case ItemTextFont(UIFont)
-    case ItemTextColor(UIColor)
-    case ItemCellBackgroundColor(UIColor)
-    case ItemCellHeight(CGFloat)
+    case itemTextFont(UIFont)
+    case itemTextColor(UIColor)
+    case itemCellBackgroundColor(UIColor)
+    case itemCellHeight(CGFloat)
     
 }
