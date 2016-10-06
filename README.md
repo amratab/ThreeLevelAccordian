@@ -1,5 +1,14 @@
 # ThreeLevelAccordian
 
+[![Swift][swift-badge]][swift-url]
+[![Platform][platform-badge]][platform-url]
+[![Build Status][build-status-badge]][build-status-url]
+
+[swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg
+[swift-url]: https://swift.org
+[platform-badge]: https://img.shields.io/badge/Platforms-OS%20X%20--%20Linux-lightgray.svg
+[platform-url]: https://swift.org
+
 [![CI Status](https://travis-ci.org/amratab/ThreeLevelAccordian.svg?branch=master)](https://travis-ci.org/Amrata Baghel/ThreeLevelAccordian)
 [![Version](https://img.shields.io/cocoapods/v/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
 [![License](https://img.shields.io/cocoapods/l/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
