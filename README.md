@@ -1,8 +1,7 @@
 # ThreeLevelAccordian
 
-[![Swift][swift-badge]][swift-url]
-[![Platform][platform-badge]][platform-url]
 [![CI Status](https://travis-ci.org/amratab/ThreeLevelAccordian.svg?branch=master)](https://travis-ci.org/Amrata Baghel/ThreeLevelAccordian)
+[![Swift][swift-badge]][swift-url]
 [![Version](https://img.shields.io/cocoapods/v/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
 [![License](https://img.shields.io/cocoapods/l/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
 [![Platform](https://img.shields.io/cocoapods/p/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
