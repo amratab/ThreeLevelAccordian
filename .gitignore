@@ -31,3 +31,7 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+.*.sw?
+.DS_Store
+.rbenv-version
+.idea
