@@ -5,6 +5,10 @@
 language: objective-c
 podfile: Example/Podfile
 osx_image: xcode8
-xcode_workspace: Example/ThreeLevelAccordian.xcworkspace
-xcode_scheme: ThreeLevelAccordian-Example
 xcode_sdk: iphonesimulator10.0
+
+before_install:
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
+script:
+- set -o pipefail && xcodebuild build -workspace Example/ThreeLevelAccordian.xcworkspace -scheme ThreeLevelAccordian-Example -sdk iphonesimulator10.0 ONLY_ACTIVE_ARCH=NO | xcpretty
