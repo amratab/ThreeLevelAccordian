@@ -25,7 +25,7 @@ class AccordianCellButton: UIButton {
     }
     
     func imageForType(_ type: AccordianCellButtonType) -> UIImage? {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = Bundle(for: Swift.type(of: self))
         switch(type) {
         case .expand :
             return UIImage(named: "forward_arrow", in: bundle, compatibleWith: nil)
