@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
 [![Platform](https://img.shields.io/cocoapods/p/ThreeLevelAccordian.svg?style=flat)](http://cocoapods.org/pods/ThreeLevelAccordian)
 
-[swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg
+[swift-badge]: https://img.shields.io/badge/Swift-4.0-orange.svg
 [swift-url]: https://swift.org
 [platform-badge]: https://img.shields.io/badge/Platforms-OS%20X%20--%20Linux-lightgray.svg
 [platform-url]: https://swift.org
